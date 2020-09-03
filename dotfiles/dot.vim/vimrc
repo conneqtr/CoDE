@@ -1,0 +1,98 @@
+source $VIMRUNTIME/base.vim
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+call plug#begin('~/.vim/plugs')
+
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-fugitive'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'pangloss/vim-javascript'
+    Plug 'elzr/vim-json'
+    Plug 'othree/html5.vim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'AndrewRadev/sideways.vim'
+    Plug 'w0rp/ale'
+
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+
+"    
+"   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+call plug#end()
+
+"   let g:deoplete#enable_at_startup = 1
+
+
+set softtabstop=4
+set shiftwidth=4
+set ignorecase
+
+nnoremap ^ 0
+nnoremap 0 ^
+nnoremap 1 $
+
+nnoremap    +	<C-W>+
+nnoremap    _	<C-W>-
+
+nnoremap    )   <C-W>>
+nnoremap    (   <C-W><
+
+nnoremap    }	}j
+nnoremap    {	{k
+
+nnoremap    <c-l> :SidewaysRight<cr>
+nnoremap    <c-h> :SidewaysLeft<cr>
+
+nnoremap    <c-g>	2<c-g>
+nnoremap    <s-down>	<c-e>
+nnoremap    <s-up>	<c-y>
+nnoremap    vaf		Vj%
+
+""tnoremap    <Esc>    <C-W>N    
+
+" inoremap    (	    ()<Esc>i
+" inoremap    "	    ""<Esc>i
+" inoremap    '	    ''<Esc>i
+" inoremap    {}	    {}<Esc>i<Return><Esc>O
+
+inoremap    ;;	    <Esc>A;
+nnoremap    ;;	    <Esc>A;<Esc>
+
+cnoreabbrev gs	    Gstatus
+
+map <leader>n		:NERDTreeToggle <Enter>
+map <leader>v		:split $MYVIMRC <Enter>
+
+map <leader><leader>	:set nohlsearch <Enter>
+map <leader>.		:SidewaysRight  <Enter>
+map <leader>,		:SidewaysLeft   <Enter>
+
+
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_powerline_fonts = 1
+
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '▸'
+
+" strange tmux colour compatibility setting
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set t_Co=256   " vim 256 colour - needed for airline
+
+colorscheme koehler
+highlight clear SignColumn 
+
+autocmd bufwritepost vimrc source $MYVIMRC
+
+":let g:NERDTreeWinSize=40
+
+
+

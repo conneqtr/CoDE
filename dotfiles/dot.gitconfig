@@ -1,0 +1,19 @@
+[user]
+	name = Lance Edusei
+	email = lance.edusei@villagesoftware.co.uk
+[alias]
+	st = status
+	co = checkout
+	in  = log ..@{u} --oneline --no-merges
+	out = log @{u}.. --oneline --no-merges
+	incoming = log ..@{u} --no-merges --decorate --format=format:'%C(auto)%h%C(reset) %C(auto)%d%C(reset) %C(auto)%s%C(reset) %C(bold blue)(%an : %cr)%C(reset)' 
+	outgoing = log @{u}.. --no-merges --decorate --format=format:'%C(auto)%h%C(reset) %C(auto)%d%C(reset) %C(auto)%s%C(reset) %C(bold blue)(%an : %cr)%C(reset)' 
+	branches = branch -a -vv
+	lga = log --graph --all --decorate --abbrev-commit
+	fev = fetch --verbose
+	remotes = remote show origin
+
+
+
+
+
