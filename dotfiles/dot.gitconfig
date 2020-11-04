@@ -1,6 +1,8 @@
 [user]
-	name = Lance Edusei
-	email = lance.edusei@villagesoftware.co.uk
+	name = 
+	email = 
+[core]
+	askPass = /usr/local/bin/getpass.sh
 [alias]
 	st = status
 	co = checkout
