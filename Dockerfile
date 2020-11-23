@@ -1,7 +1,7 @@
 FROM archlinux
 
 
-ENV NEWUSER=paul
+ENV NEWUSER=
 
 
 ### Install dev' tools
