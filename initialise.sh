@@ -27,4 +27,6 @@ echo "### user '$NEWUSER' initialised "
 
 pacman --sync --refresh
 
+echo "### you may now wish to update your packages : run pacman --sync --sysupgrade"
+
 su $NEWUSER
