@@ -2,6 +2,14 @@
 
 CONTAINERNAME=devcon
 
+grep -e "NEWUSER=\w" Dockerfile
+
+if [ $? -eq 1 ] 
+then
+	echo "Please set NEWUSER in Dockerfile";
+	exit 1;
+fi
+
 echo "### container name set to: $CONTAINERNAME"
 
 docker build ./ --tag code
