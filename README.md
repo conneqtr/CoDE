@@ -1,4 +1,4 @@
-# CoDE - *Co*ntainer *D*evelopment *E*nvironment
+# CoDE - **Co**ntainer **D**evelopment **E**nvironment
 
 The aim of the project is automate the creation of a development environment within a container.
 
@@ -19,7 +19,7 @@ The environment is a Linux shell with access to the following tools ...
 The host must be a Linux based OS, either native or WSL2, with docker installed.
 Access to git while preferable is not strictly necessary.
 
-The environment must be built in a directory containing the Personal Access Token of the Git repository you wish to access from within the container. The Token must be stored in a file named `random.txt`.
+The environment must be built in a directory containing the Personal Access Token of the Git repository you wish to access from within the container. The Token should be stored in a file named `random.txt`.
 
 ## Getting Started Guide
 
