@@ -20,11 +20,11 @@ The environment is a Linux shell with access to the following tools ...
 
 If you are unfamilar with some Linux/Unix terms, the following might help :
 
-- root user - analagous to a super-user or system administrator in other systems. A user logged in as `root` can edit system files, create and change users, alter permissions etc. A user will typically *not* perform day-to-day operations as `root`
+- *root user* - analagous to a super-user or system administrator in other systems. A user logged in as `root` can edit system files, create and change users, alter permissions etc. A user will typically *not* perform day-to-day operations as `root`
 
-- shell - technically, the shell is the program running in the background that accepts and responds to the commands you enter at the command line. It comprises the command line environment that you operate in. 
-It influences everything from which environment (i.e. global) variables are available to you, to what the command-lne prompt looks like. 
-As with any program, the shell will run with the permissions of the user who started it. The `exit` command is typically used to leave a shell and shut it down, returning the user to the environment they were in before the shell was started. A shell can run within (or as a subprocess) of another shell.
+- *shell* - technically, the shell is the program running in the background that accepts and responds to the commands you enter at the command line. It comprises the command line environment that you operate in. 
+It influences everything from which environment (i.e. global) variables are available to you, to what the command-line prompt looks like. 
+As with any program, the shell will run with the permissions of the user who started it. The `exit` command is typically used to leave a shell and shut it down, returning the user to the environment they were in before the shell was started. A shell can run within (i.e. as a subprocess of) another shell.
 
 ## System Requirements
 
@@ -35,18 +35,18 @@ Access to git while preferable is not strictly necessary.
 
 The environment must be built in a directory containing the Personal Access Token, password or key of the Git repository you wish to access from within the container. If the repository offers both HTTPS and SSH access, select HTTPS. 
 The Token should be stored in a file named `random.txt`.
-On Azure, the required password can be accessed by going to Azure DevOps >> <Your Project> >> Repos. The `Clone` button at the top right of the file listing will allow you to `Generate Git Credentials`. Copy and paste the generated password. 
+On Azure, the required password can be accessed by going to Azure DevOps >> [Your Project] >> Repos. The `Clone` button at the top right of the file listing will allow you to `Generate Git Credentials`. Copy and paste the generated password. 
 
 
 ## Getting Started Guide
 
-It may be advisable to perform a system upgrade of the host before following the steps outlined below. 
+It may be advisable to perform a system upgrade of the host before following the steps below. 
 
-On Ubuntu this can be achieved using `sudo apt update` (to refresh the package database with all the latest version numbers etc.)  followed by `sudo apt upgrade` (to actually download and install the latest available version of all packages on the system).
+On Ubuntu this can be achieved using `sudo apt update` (to refresh the package database with all the latest version numbers etc.)  followed by `sudo apt upgrade` (to actually download and install the latest available versions of all packages on the system).
 
-- Acquire the [conneqtr/CoDE](https://github.com/conneqtr/CoDE) project at GitHub via either `git clone` or by downloading the zip file.
+- Acquire the [conneqtr/CoDE](https://github.com/conneqtr/CoDE) project from GitHub either via `git clone` or by downloading the zip file.
 
-- Update the `Dockerfile` setting the `NEWUSER` variable to the desired name of your user within the container.
+- Update the `Dockerfile` setting the `NEWUSER` variable to the desired name your user will have within the container.
 
 - Update `dotfiles/git.config` with your preferred git username and email settings
 
@@ -72,15 +72,13 @@ If you have followed the getting started guide, you will already be logged into 
 
 ### Restarting Your Container
 
-- To start your container after logging in to the host system, run `docker container start <containername>`. 
+- To restart your container after logging out to the host system, run `docker container start <containername>`. 
   - This can be shortened to `docker start <container_name>`.
 
 - To enter the now running container, run `docker container exec --interactive --tty <containername> bash`
   - This can be shortened to `docker exec --interactive --tty <containername> bash`
-  - And further shortened to `docker exec -it <containername> bash`
+  - Or further shortened to `docker exec -it <containername> bash`
   
-NOTE : 'container' new way etc.
-
-- You will be logged into your container as `root` and will need to 'switchuser' or `su` into your actual user
+- You will be logged into your container as `root` and will need to 'switchuser' or `su` into your actual user.
 
   
