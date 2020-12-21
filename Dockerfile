@@ -16,7 +16,7 @@ RUN echo "installing system tools ..."
 RUN pacman --sync man-db man-pages which less bat tree colordiff vi --noconfirm
 
 RUN echo "installing development tools ..."
-RUN pacman --sync git docker openssh vim --noconfirm
+RUN pacman --sync git docker openssh vim nano --noconfirm
 
 RUN echo "installing nodejs ..."
 RUN pacman --sync nodejs-lts-erbium npm  --noconfirm
