@@ -33,11 +33,10 @@ Access to git while preferable is not strictly necessary.
 
 ### Docker Desktop
 
-Install Docker Desktop to set up and configure docker in your WSL2 installation.
+If running the environment on Windows, install Docker Desktop to set up and configure docker in your WSL2 installation.
 
-- Read the notes on the docker for windows documentation page and then download and install Docker Desktop
-
-- https://docs.docker.com/docker-for-windows/wsl/
+- Read the notes on the docker for windows [documentation page](https://docs.docker.com/docker-for-windows/wsl/) and then download and install Docker Desktop.
+- Ensure your host OS is running on WSL*2* rather than WSL1. Instructions on how to check this are in the above documentation page.
 
 ### Git Credentials
 
