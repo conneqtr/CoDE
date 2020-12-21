@@ -34,7 +34,10 @@ Access to git while preferable is not strictly necessary.
 ## Git Credentials
 
 The environment must be built in a directory containing the Personal Access Token, password or key of the Git repository you wish to access from within the container. If the repository offers both HTTPS and SSH access, select HTTPS. 
-The Token should be stored in a file named `random.txt`.
+
+The Token should be stored in a file named `random.txt`. This file should live in the directory where the container image will be built.
+
+### Azure
 On Azure, the required password can be accessed by going to Azure DevOps >> [Your Project] >> Repos. The `Clone` button at the top right of the file listing will allow you to `Generate Git Credentials`. Copy and paste the generated password. 
 
 
