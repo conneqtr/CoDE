@@ -13,7 +13,10 @@ fi
 CONTAINERNAME=devcon
 echo "### container name set to: $CONTAINERNAME"
 
-mkdir -p /tmp/$CONTAINERNAME
+docker stop $CONTAINERNAME # it might be nice if this was behind an -f flag
+docker rm $CONTAINERNAME
+
+mkdir -p /tmp/$CONTAINERNAME  # this would work if we were not using a tmp dir !
 echo "### created directory in /tmp/$CONTAINERNAME"
 
 
