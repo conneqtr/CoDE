@@ -61,6 +61,8 @@ On Ubuntu this can be achieved using `sudo apt update` (to refresh the package d
 
 - Update `dotfiles/git.config` with your preferred git username and email settings
 
+- Update `build.sh` editing the '-p' or 'ports' line of the Docker run command to expose the ports your container is required to publish
+
 - Optional : The default name of the final container is 'devcon' if you wish to change this, update the `CONTAINERNAME` variable in `build.sh`. 
 
 - Run `./build.sh`. This will build and run the `CoDE` image , dropping you into the resultant container as `root`.

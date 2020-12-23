@@ -30,6 +30,7 @@ docker run 	--mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock 
 		--mount type=bind,src=`pwd`/random.txt,dst=/var/run/random.txt,readonly	\
 		--mount type=bind,src=/tmp/$CONTAINERNAME,dst=/tmp/$CONTAINERNAME	\
 		--name $CONTAINERNAME --hostname $CONTAINERNAME --env DOCKERGID 	\
+		-p 6000-6001:6000-6001 -p 4300:4300 -p 4200:4200 			\
 		--interactive --tty 							\
 		  code
 
