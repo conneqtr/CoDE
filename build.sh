@@ -16,10 +16,6 @@ echo "### container name set to: $CONTAINERNAME"
 docker stop $CONTAINERNAME # it might be nice if this was behind an -f flag
 docker rm $CONTAINERNAME
 
-mkdir -p /tmp/$CONTAINERNAME  # this would work if we were not using a tmp dir !
-echo "### created directory in /tmp/$CONTAINERNAME"
-
-
 docker build ./ --tag code
 echo "### image built"
 
@@ -31,7 +27,7 @@ echo "### starting container ..."
 
 docker run 	--mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock 	\
 		--mount type=bind,src=`pwd`/random.txt,dst=/var/run/random.txt,readonly	\
-		--mount type=bind,src=/tmp/$CONTAINERNAME,dst=/tmp/$CONTAINERNAME	\
+		--mount type=bind,src=/tmp/,dst=/mnt/tmp/				\
 		--name $CONTAINERNAME --hostname $CONTAINERNAME --env DOCKERGID 	\
 		-p 6000-6001:6000-6001 -p 4300:4300 -p 4200:4200 			\
 		--interactive --tty 							\
