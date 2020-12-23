@@ -34,7 +34,7 @@ echo "### created projects directory"
 
 chown -R $NEWUSER:users ./*
 chown -R $NEWUSER:users ./.*   # make sure we get all the .files too
-echo "file ownership transferred to '$NEWUSER'"
+echo "### file ownership transferred to '$NEWUSER'"
 
 echo "### user '$NEWUSER' initialised "
 
