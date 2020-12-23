@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
+export CONTAINERIP=`ip address show | grep inet | grep eth0 | cut -f 6 -d " " | cut -f 1 -d "/"`
+
+
 alias ls='ls --color=auto'
 alias ll='ls -lh'
 
@@ -32,6 +36,8 @@ alias lightsail='ssh 3.9.145.39 -i ~/.ssh/LightsailDefaultKey-eu-west-2.pem -l u
 alias lightsail2='ssh 35.178.229.227 -i ~/.ssh/LightsailDefaultKey-eu-west-2.pem -l ubuntu'
 alias lightsail3='ssh 35.178.69.198 -i ~/.ssh/LightsailDefaultKey-eu-west-2.pem -l ubuntu'
 
+alias rungit='ungit --ungitBindIp $CONTAINERIP'
+
 
 cdx() {
 
@@ -57,8 +63,8 @@ PS1='[\u@\h \W]\$ '
 
 # To get the best from the 'finds' command, wrap your search term in quotes e.g.
 
-# "foo"
+# finds "foo"
 
 # A preceding and/or succeeding * can often be useful too to get a broader wildcard search e.g.
 
-# "*foo*"
+# finds "*foo*"

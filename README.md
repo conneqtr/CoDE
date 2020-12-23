@@ -101,4 +101,18 @@ If you have followed the getting started guide, you will already be logged into 
   
 - You will be logged into your container as `root` and will need to 'switchuser' or `su` into your actual user.
 
-  
+### Ungit
+
+Ungit is a useful Git visualisation tool. Because it is served via a browser it can be used from within a container. To use ungit  :
+
+- Find the ip address of the container. 
+	- You can use `ip address show` then look for the line beginning `eth0`
+- Pick a port number that your container is exposing.
+	- See the 'ports' line in build.sh
+
+- `cd` to the root directory of your version controlled project.
+	- This is the directory where the `.git` folder lives.
+
+- Run `ungit --port [port_number] --ungitBindIp [container_ip_address]` 
+
+- Alternatively use the `rungit --port [port_number]` bash alias in `.bashrc`
