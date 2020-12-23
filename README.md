@@ -116,3 +116,7 @@ Ungit is a useful Git visualisation tool. Because it is served via a browser it 
 - Run `ungit --port [port_number] --ungitBindIp [container_ip_address]` 
 
 - Alternatively use the `rungit --port [port_number]` bash alias in `.bashrc`
+
+### Vim
+
+- Run the command `:PlugInstall` within Vim to install the plugins listed in the configuration file.
