@@ -31,6 +31,13 @@ As with any program, the shell will run with the permissions of the user who sta
 The host must be a Linux based OS, either native or WSL2, with docker installed.
 Access to git while preferable is not strictly necessary.
 
+### Docker Desktop
+
+If running the environment on Windows, install Docker Desktop to set up and configure docker in your WSL2 installation.
+
+- Read the notes on the docker for windows [documentation page](https://docs.docker.com/docker-for-windows/wsl/) and then download and install Docker Desktop.
+- Ensure your host OS is running on WSL*2* rather than WSL1. Instructions on how to check this are in the above documentation page.
+
 ### Git Credentials
 
 The environment must be built in a directory containing the Personal Access Token, password or key of the Git repository you wish to access from within the container. If the repository offers both HTTPS and SSH access, select HTTPS. 
@@ -59,7 +66,7 @@ On Ubuntu this can be achieved using `sudo apt update` (to refresh the package d
 
 - Update the `Dockerfile` setting the `NEWUSER` variable to the desired name your user will have within the container.
 
-- Update `dotfiles/git.config` with your preferred git username and email settings
+- Update `dotfiles/dot.gitconfig` with your preferred git username and email settings
 
 - Update `build.sh` editing the '-p' or 'ports' line of the Docker run command to expose the ports your container is required to publish
 
