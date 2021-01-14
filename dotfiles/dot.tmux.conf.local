@@ -340,8 +340,11 @@ tmux_conf_copy_to_os_clipboard=false
  bind _ split-window -v
 # split current window vertically
  bind | split-window -h
-# switch to previous pane
+# switch to next pane
  bind C-a  select-pane -t :.+
+# switch to previous pane
+ bind A last-pane
+
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
