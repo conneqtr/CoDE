@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 
+export EDITOR=vi
 export CONTAINERIP=`ip address show | grep inet | grep eth0 | cut -f 6 -d " " | cut -f 1 -d "/"`
 
 
