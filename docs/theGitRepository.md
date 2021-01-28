@@ -66,13 +66,20 @@ switch to branch
 
 #### ignore files/directories 
 
-adding a file/directory to `.gitignore` will do nothing if it was previously tracked 
+adding a file to `.gitignore` will do nothing if it was previously tracked 
 
 do this as well
 
-`git rm -r --cached <directory_name> | <filename>`
+`git rm --cached <filename>`
 
--r (recursive) is for directories only
+for directories add the -r (recursive) flag
+
+
+#### check if a particular file is being ignored
+
+`git check-ignore <filename>`
+
+add the -v (verbose) flag for more information
 
 #### force add ignored files
 
@@ -223,3 +230,5 @@ e.g squash last 2 commits into the commit prior
 #### history of all transactions / history of everything
 
 git reflog
+
+#### 
