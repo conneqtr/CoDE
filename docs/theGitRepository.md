@@ -18,6 +18,14 @@ switch to branch
 
 `git log master..`
 
+### which commits are in that branch but not in this
+
+`git log ..<that_branch>`
+
+### which commits are in this branch but not in that
+
+`git log <that_branch>..`
+
 #### log with file change details
 
 `git log --stat`
@@ -231,4 +239,6 @@ e.g squash last 2 commits into the commit prior
 
 git reflog
 
-#### 
+#### which branches is this commit in 
+
+git branch --contains <commit>
