@@ -242,3 +242,12 @@ git reflog
 #### which branches is this commit in 
 
 git branch --contains <commit>
+
+
+### merge conflicts : just accept all their changes
+
+`git merge --abort`
+
+abort merge after getting conflicts
+
+`git merge --strategy-option=theirs`
