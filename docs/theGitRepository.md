@@ -251,3 +251,9 @@ git branch --contains <commit>
 abort merge after getting conflicts
 
 `git merge --strategy-option=theirs`
+
+
+### copy file from one branch to another 
+### 	(assuming you are on the destination branch)
+
+git checkout <branch-to-copy-from> <file-to-copy>
